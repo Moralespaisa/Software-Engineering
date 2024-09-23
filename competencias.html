@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competencias - Ingeniero en Software</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff0000; /* Fondo rojo si no carga la imagen */
+            background-image: url("./Resources/Skills.jpg"); /* Asegúrate de que la ruta sea correcta */
+            background-size: cover;
+            background-position: center;
+        }
+        main {
+            padding: 20px; 
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el contenido */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .titulo-principal {
+            font-size: 4em;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.3); 
+            overflow: hidden;
+            position: fixed;
+            top: 0; 
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white; 
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.3);
+            transition: ease-out 0.4s;
+        }
+        nav a:hover {
+            box-shadow: inset 0 100px 0 0 #000000;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+            align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.3); 
+            color: white; 
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 10px;
+        }
+        
+        h2 {
+            font-size: 1.9em; 
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .tab {
+            font-size: 1.5em; 
+            margin: 10px 0; 
+            cursor: pointer; 
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff; 
+            text-align: center;
+        }
+
+        /* Estilos para la animación suave */
+        .content {
+            max-height: 0; /* Ocultar contenido inicialmente */
+            overflow: hidden; /* Evitar que el contenido desborde mientras se oculta */
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Transición suave */
+            padding: 0; /* Remover el padding cuando el contenido está oculto */
+            color:#ffffff;
+        }
+
+        .content.visible {
+            max-height: 500px; /* Ajusta este valor según el contenido */
+            padding: 10px; /* Agrega padding cuando el contenido es visible */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="conclusiones.html">Conclusiones</a>
+        <a href="Encuesta.html">Encuesta</a>        
+    </nav>
+
+    <main>
+        <h1 class="titulo-principal">Competencias del Ingeniero en Software</h1>
+        <div class="container">
+            <h2>Competencias Clave</h2>
+            <div class="tab" onclick="toggleContent('tecnicas')">1. Competencias Técnicas</div>
+            <div id="tecnicas" class="content">
+                <p>Los ingenieros en software deben tener una sólida comprensión de los principios de la ingeniería de software, así como habilidades en programación en múltiples lenguajes. Esto incluye:</p>
+                <ul>
+                    <li>Desarrollo de software en lenguajes como Java, Python, C++, entre otros.</li>
+                    <li>Conocimiento en bases de datos y sistemas de gestión de bases de datos.</li>
+                    <li>Capacidad para diseñar y desarrollar arquitecturas de software.</li>
+                </ul>
+            </div>
+
+            <div class="tab" onclick="toggleContent('problemas')">2. Habilidades de Resolución de Problemas</div>
+            <div id="problemas" class="content">
+                <p>La capacidad para analizar y resolver problemas complejos es esencial. Esto incluye:</p>
+                <ul>
+                    <li>Identificación de problemas y propuesta de soluciones efectivas.</li>
+                    <li>Capacidad para realizar pruebas y depuración de software.</li>
+                    <li>Desarrollo de algoritmos y estructuras de datos eficientes.</li>
+                </ul>
+            </div>
+
+            <div class="tab" onclick="toggleContent('comunicacion')">3. Habilidades de Comunicación</div>
+            <div id="comunicacion" class="content">
+                <p>La comunicación efectiva es clave para colaborar con otros miembros del equipo y clientes. Esto incluye:</p>
+                <ul>
+                    <li>Capacidad para explicar conceptos técnicos a audiencias no técnicas.</li>
+                    <li>Habilidades para escribir documentación técnica clara y concisa.</li>
+                    <li>Trabajo en equipo y gestión de proyectos.</li>
+                    <li>Dominio de por lo menos una o más lenguas diferentes a la materna.</li>
+                </ul>
+            </div>
+
+            <div class="tab" onclick="toggleContent('adaptabilidad')">4. Adaptabilidad y Aprendizaje Continuo</div>
+            <div id="adaptabilidad" class="content">
+                <p>El campo de la ingeniería de software está en constante evolución, por lo que los ingenieros deben estar dispuestos a aprender y adaptarse a nuevas tecnologías y metodologías. Esto incluye:</p>
+                <ul>
+                    <li>Capacidad para aprender nuevas tecnologías y herramientas.</li>
+                    <li>Adaptación a cambios en los requisitos del proyecto.</li>
+                    <li>Participación en cursos y capacitaciones continuas.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Esta página fue creada por:<br>
+        Simón Morales.<br>
+        Jose Perez.<br>
+        Kenner Medina.<br>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.classList.toggle('visible');
+        }
+    </script>
+
+</body>
+</html>

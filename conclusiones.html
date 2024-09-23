@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusiones - Ingeniero en Software</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff0000; /* Fondo rojo si no carga la imagen */
+            background-image: url("./Resources/Conclusionsback.jpg"); /* Asegúrate de que la ruta sea correcta */
+            background-size: cover;
+            background-position: center;
+        }
+        main {
+            padding: 20px; 
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el contenido */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .titulo-principal {
+            font-size: 4em;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.3); 
+            overflow: hidden;
+            position: fixed;
+            top: 0; 
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white; 
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.3);
+            transition: ease-out 0.4s;
+        }
+        nav a:hover {
+            box-shadow: inset 0 100px 0 0 #000000;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+            align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.3); 
+            color: white; 
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 10px;
+        }
+        
+        h2, h3 {
+            font-size: 1.5em; 
+            margin: 10px 0; 
+            cursor: pointer; 
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+        }
+        h2:hover, h3:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff; 
+            text-align: center;
+        }
+
+        .content {
+            max-height: 0; /* Ocultar contenido inicialmente */
+            overflow: hidden; /* Evitar que el contenido desborde mientras se oculta */
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Transición suave */
+            padding: 0; /* Remover el padding cuando el contenido está oculto */
+            color:#ffffff;
+        }
+
+        .content.visible {
+            max-height: 500px; /* Ajusta este valor según el contenido */
+            padding: 10px; /* Agrega padding cuando el contenido es visible */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="competencias.html">Competencias</a>
+        <a href="Encuesta.html">Encuesta</a>        
+    </nav>
+
+    <main>
+        <h1 class="titulo-principal">Conclusiones</h1>
+        <div class="container">
+            <h2 onclick="toggleContent('conclusiones-principales')">*Conclusiones Principales</h2>
+            <div id="conclusiones-principales" class="content">
+                <p>Al concluir este análisis, se puede afirmar que las competencias del ingeniero en software son amplias y diversas. Entre las conclusiones clave, encontramos:</p>
+                <ul>
+                    <li>La importancia de la habilidad técnica y el conocimiento profundo en desarrollo de software.</li>
+                    <li>La necesidad de habilidades de resolución de problemas para enfrentar desafíos complejos.</li>
+                    <li>La capacidad para comunicarse efectivamente y colaborar con otros profesionales en el campo.</li>
+                    <li>El compromiso con la educación continua y la adaptación a nuevas tecnologías.</li>
+                </ul>
+            </div>
+
+            <h3 onclick="toggleContent('competencia-tecnica')">1. Competencia Técnica</h3>
+            <div id="competencia-tecnica" class="content">
+                <p>El dominio de lenguajes de programación y la capacidad de diseñar soluciones robustas son esenciales para el éxito en la ingeniería de software.</p>
+            </div>
+
+            <h3 onclick="toggleContent('resolucion-problemas')">2. Resolución de Problemas</h3>
+            <div id="resolucion-problemas" class="content">
+                <p>Los ingenieros de software deben ser capaces de identificar problemas y desarrollar soluciones efectivas aplicando técnicas y herramientas adecuadas.</p>
+            </div>
+
+            <h3 onclick="toggleContent('comunicacion-colaboracion')">3. Comunicación y Colaboración</h3>
+            <div id="comunicacion-colaboracion" class="content">
+                <p>Las habilidades de comunicación son cruciales para trabajar en equipo y explicar conceptos técnicos de manera clara a diversas audiencias.</p>
+            </div>
+
+            <h3 onclick="toggleContent('educacion-continua')">4. Educación Continua</h3>
+            <div id="educacion-continua" class="content">
+                <p>La tecnología avanza rápidamente, por lo que es vital que los ingenieros de software se mantengan actualizados y capacitados en nuevas herramientas y metodologías.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Esta página fue creada por:<br>
+        Simón Morales.<br>
+        Jose Perez.<br>
+        Kenner Medina.<br>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.classList.contains("visible")) {
+                content.classList.remove("visible");
+            } else {
+                content.classList.add("visible");
+            }
+        }
+    </script>
+
+</body>
+</html>
