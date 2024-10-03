@@ -12,8 +12,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ff0000; /* Fondo rojo si no carga la imagen */
-            background-image: url("RESOURCES/MAINBACKGROUND.jpg"); /* Asegúrate de que la ruta sea correcta */
+            background-color: #ff0000; 
+            background-image: url("RESOURCES/MAINBACKGROUND.jpg"); 
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -22,8 +22,8 @@
         }
         main {
             padding: 20px; 
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el contenido */
-            flex: 1; /* Hace que el main se expanda para ocupar el espacio disponible */
+            background-color: rgba(0, 0, 0, 0.7); 
+            flex: 1; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -66,12 +66,12 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+            background-color: rgba(255, 255, 255, 0.3); 
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             display: flex;
-            flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
-            align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+            flex-direction: column; 
+            align-items: center; 
         }
         footer {
             background-color:rgba(0, 0, 0, 0.3); 
@@ -107,18 +107,17 @@
             text-align: center;
         }
 
-        /* Estilos para la animación suave */
         .content {
-            max-height: 0; /* Ocultar contenido inicialmente */
-            overflow: hidden; /* Evitar que el contenido desborde mientras se oculta */
-            transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Transición suave */
-            padding: 0; /* Remover el padding cuando el contenido está oculto */
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out; 
+            padding: 0; 
             color:#ffffff;
         }
 
         .content.visible {
-            max-height: 500px; /* Ajusta este valor según el contenido */
-            padding: 10px; /* Agrega padding cuando el contenido es visible */
+            max-height: 500px; 
+            padding: 10px; 
         }
     </style>
 </head>
